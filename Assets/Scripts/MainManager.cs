@@ -84,6 +84,7 @@ public class MainManager : MonoBehaviour
             SessionManager.instance.currentHighScoreOwnerName = SessionManager.instance.currentName;
             SessionManager.instance.currentHighScore = m_Points;
             BestScoreText.text = "Best Score : " + SessionManager.instance.currentHighScoreOwnerName + ": " + SessionManager.instance.currentHighScore;
+            SessionManager.instance.SaveHighScore();
         }
         m_GameOver = true;
         GameOverText.SetActive(true);
