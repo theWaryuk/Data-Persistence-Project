@@ -29,16 +29,4 @@ public class UIStartMenu : MonoBehaviour
         SessionManager.instance.currentName = inputName.text;
         SceneManager.LoadScene(1);
     }
-
-    public void QuitGame()
-    {
-        SessionManager.instance.SaveHighScore();
-#if UNITY_EDITOR
-        EditorApplication.ExitPlaymode();
-#elif UNITY_WEBGL
-        // Do nothing
-#else
-        Application.Quit();
-#endif
-    }
 }
